@@ -15,7 +15,7 @@ export const user = () => {
     
     
 
-    for(let i=0;i < 500;i++){
+    for(let i=0;i < 1000;i++){
         rootStore.userStore.addUser();
     }
 

@@ -13,18 +13,11 @@ interface Props {
 
 const UserList: React.FC<Props> = ({ users , age }) => {
 
-    const [user,setUser] = useState<User[]>([]);
-    const [modal, setModal] = useState(false);
-
-    const toggleModal = () => {
-      setModal(!modal);
-    };
-  
-    if(modal) {
-      document.body.classList.add('active-modal')
-    } else {
-      document.body.classList.remove('active-modal')
-    }
+    let [user,setUser] = useState<User[]>([]);
+   
+    
+    
+   
 
     users.forEach(u => {
         
@@ -32,19 +25,19 @@ const UserList: React.FC<Props> = ({ users , age }) => {
             user.push(u);
             
         }
-    })
+    });
+    
 
   return (
     <div>
-      <div className="modal-wrapper"></div>
-      <div className="modal-container"></div>
-      <h2>User List</h2>
+     
+      <h2>User List  <b>Age: {age}</b> </h2>
       <ul>
-        {user.map((us, index) => (
+        {(user as User[]).map((us, index) => (
            
                 <div>
                 <li key={index}>
-                {us.name},{us.age}
+                {us.name}
                 </li>
                 </div>
             
