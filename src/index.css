@@ -1,0 +1,16 @@
+.y-axix{
+  display: block;
+  text-align: left;
+  writing-mode: vertical-rl;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.x-axix{
+  display :block;
+  text-align: center;
+}
+
